@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45" started-at="2019-07-30T18:03:49Z" finished-at="2019-07-30T18:03:49Z">
+  <suite name="Default suite" duration-ms="5870" started-at="2019-07-30T18:44:39Z" finished-at="2019-07-30T18:44:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45" started-at="2019-07-30T18:03:49Z" finished-at="2019-07-30T18:03:49Z">
+    <test name="Default test" duration-ms="5870" started-at="2019-07-30T18:44:39Z" finished-at="2019-07-30T18:44:45Z">
       <class name="com.qa.tests.SampleTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.qa.tests.SampleTest@224edc67]" name="beforeTest" is-config="true" duration-ms="16" started-at="2019-07-30T18:03:49Z" finished-at="2019-07-30T18:03:49Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.qa.tests.SampleTest@61832929]" name="beforeTest" is-config="true" duration-ms="13" started-at="2019-07-30T18:44:39Z" finished-at="2019-07-30T18:44:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="firstTest()[pri:0, instance:com.qa.tests.SampleTest@224edc67]" name="firstTest" duration-ms="6" started-at="2019-07-30T18:03:49Z" finished-at="2019-07-30T18:03:49Z">
+        <test-method status="PASS" signature="firstTest()[pri:0, instance:com.qa.tests.SampleTest@61832929]" name="firstTest" duration-ms="5833" started-at="2019-07-30T18:44:39Z" finished-at="2019-07-30T18:44:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.qa.tests.SampleTest@224edc67]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-07-30T18:03:49Z" finished-at="2019-07-30T18:03:49Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.qa.tests.SampleTest@61832929]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-07-30T18:44:45Z" finished-at="2019-07-30T18:44:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
