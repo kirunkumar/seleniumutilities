@@ -17,20 +17,33 @@ public class SampleTest extends BaseClass{
   @Test
   public void firstTest() {
 	
-	initializeDriver();	  
+	  
 	System.out.println("First Sample Test");
 	driver.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.141.59");
 	
 	
   }
 
+  @Test
+  public void secondTest() {
+	
+	
+	System.out.println("secondTest ");
+	driver.get("https://mvnrepository.com/open-source/application-metrics");
+	
+	
+  }
+  
 
   @BeforeTest
   public void beforeTest() {
+	  initializeDriver();	  
+	  
   }
 
   @AfterTest
   public void afterTest() {
+	  
 	  
 	  driver.quit();
   }
