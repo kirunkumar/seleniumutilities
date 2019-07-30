@@ -1,11 +1,17 @@
 package com.qa.tests;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.base.BaseClass;
+import com.qa.utilTests.ReadProperties;
+
+
 
 public class SampleTest extends BaseClass{
   SampleTest() {
@@ -19,7 +25,7 @@ public class SampleTest extends BaseClass{
 	
 	  
 	System.out.println("First Sample Test");
-	driver.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.141.59");
+	driver.get(prop.getProperty("url1"));
 	
 	
   }
@@ -29,14 +35,24 @@ public class SampleTest extends BaseClass{
 	
 	
 	System.out.println("secondTest ");
-	driver.get("https://mvnrepository.com/open-source/application-metrics");
+	driver.get(prop.getProperty("url2"));
 	
 	
   }
   
+  
+  @Test
+  public void thirdTest() {
+	
+	
+	driver.get("https://www.guru99.com/listeners-selenium-webdriver.html");
+	Assert.assertEquals(driver.getTitle(), "XYZ");
+	
+  }
 
   @BeforeTest
   public void beforeTest() {
+	  loadProperties();
 	  initializeDriver();	  
 	  
   }

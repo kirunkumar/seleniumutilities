@@ -16,7 +16,6 @@ public class ReadProperties extends BaseClass{
   @Test
   public void printProperties() {
 	  
-	  loadProperties();
 	  System.out.println("URL is:" + prop.getProperty("url"));
   }
   
@@ -24,7 +23,7 @@ public class ReadProperties extends BaseClass{
   @BeforeTest
   public void beforeTest() {
 	  
-	  //loadProperties();
+	  loadProperties();
   }
 
 }

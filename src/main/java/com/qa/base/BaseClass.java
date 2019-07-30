@@ -29,9 +29,9 @@ public class BaseClass {
 	public void loadProperties() {
 		
 		try {
-			//fis = new FileInputStream(System.getProperty("user.dir") + "/srsc/main/java/com/qa/data/config.properties");
+			fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/com/qa/data/config.properties");
 			
-			fis = new FileInputStream("/Users/kiran/Documents/Eclipse/Workspace/seleniumutilities/src/main/java/com/qa/data/config.properties");
+			//fis = new FileInputStream("/Users/kiran/Documents/Eclipse/Workspace/seleniumutilities/src/main/java/com/qa/data/config.properties");
 			prop = new Properties();
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
@@ -41,9 +41,7 @@ public class BaseClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
-		
+				
 	}
 
 }
