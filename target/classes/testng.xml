@@ -7,10 +7,10 @@
 	</listeners>
 
 
-	<test name="Free CRM App Test Cases">
+	<test name="Selenium Utility test cases">
 		<classes>
 			<class name="com.qa.tests.SampleTest"></class>
-			
+			<class name="com.qa.utilTests.ReadProperties"></class>			
 
 		</classes>
 	</test>

@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.utilTests.ReadProperties">
+      <class name="com.broken.links.VerifyBrokenLinks">
         <methods>
-          <include name="printProperties"/>
-          <include name="beforeTest"/>
+          <include name="launchBrowser"/>
+          <include name="actualTestHere"/>
+          <include name="killBrowser"/>
         </methods>
-      </class> <!-- com.qa.utilTests.ReadProperties -->
+      </class> <!-- com.broken.links.VerifyBrokenLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

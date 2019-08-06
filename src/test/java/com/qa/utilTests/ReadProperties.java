@@ -10,7 +10,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
+
+//@Listeners(com.qa.listeners.ExtentReportListener.class)
 public class ReadProperties extends BaseClass{
 	
   @Test

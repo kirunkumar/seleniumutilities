@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Utilities"  parallel="tests" thread-count="2">
+
+	<listeners>
+		<listener class-name="com.qa.listeners.ExtentReportListener" />
+	</listeners>
+
+		
+				
+		<test name="Selenium Utility test cases with Chrome Browser">
+		
+		<parameter name="browser" value="Chrome" />
+			<classes>
+				<class name="com.qa.tests.SampleTest"></class>
+				<class name="com.qa.utilTests.ReadProperties"></class>			
+			<!--	<class name="com.qa.tests.ScrollByFunction"></class>	-->	
+	
+			</classes>
+		</test>
+
+		<test name="Selenium Utility test cases with Safari Browser">
+		
+		<parameter name="browser" value="Safari" />
+			<classes>
+				<class name="com.qa.tests.SampleTest"></class>
+				<class name="com.qa.utilTests.ReadProperties"></class>	
+			
+			<!--Your comment-->	
+			
+			</classes>
+		</test>
+
+</suite>

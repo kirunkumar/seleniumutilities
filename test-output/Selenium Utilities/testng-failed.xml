@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Selenium Utilities]">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Selenium Utilities]" parallel="tests">
   <listeners>
     <listener class-name="com.qa.listeners.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Free CRM App Test Cases(failed)">
+  <test thread-count="2" name="Selenium Utility test cases with Safari Browser(failed)" parallel="tests">
+    <parameter name="browser" value="Safari"/>
     <classes>
       <class name="com.qa.tests.SampleTest">
         <methods>
+          <include name="beforeSuiteMethod"/>
           <include name="thirdTest"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.qa.tests.SampleTest -->
     </classes>
-  </test> <!-- Free CRM App Test Cases(failed) -->
+  </test> <!-- Selenium Utility test cases with Safari Browser(failed) -->
+  <test thread-count="2" name="Selenium Utility test cases with Chrome Browser(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.qa.tests.SampleTest">
+        <methods>
+          <include name="beforeSuiteMethod"/>
+          <include name="thirdTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.qa.tests.SampleTest -->
+    </classes>
+  </test> <!-- Selenium Utility test cases with Chrome Browser(failed) -->
 </suite> <!-- Failed suite [Selenium Utilities] -->

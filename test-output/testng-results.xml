@@ -1,38 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Selenium Utilities" duration-ms="54460" started-at="2019-07-30T20:27:20Z" finished-at="2019-07-30T20:28:14Z">
+  <suite name="Default suite" duration-ms="169287" started-at="2019-08-05T23:46:18Z" finished-at="2019-08-05T23:49:07Z">
     <groups>
     </groups>
-    <test name="Free CRM App Test Cases" duration-ms="54460" started-at="2019-07-30T20:27:20Z" finished-at="2019-07-30T20:28:14Z">
-      <class name="com.qa.tests.SampleTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.qa.tests.SampleTest@7cd62f43]" name="beforeTest" is-config="true" duration-ms="2589" started-at="2019-07-30T20:27:20Z" finished-at="2019-07-30T20:27:22Z">
+    <test name="Default test" duration-ms="169287" started-at="2019-08-05T23:46:18Z" finished-at="2019-08-05T23:49:07Z">
+      <class name="com.broken.links.VerifyBrokenLinks">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.broken.links.VerifyBrokenLinks@6d4b1c02]" name="launchBrowser" is-config="true" duration-ms="23" started-at="2019-08-05T23:46:18Z" finished-at="2019-08-05T23:46:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="firstTest()[pri:0, instance:com.qa.tests.SampleTest@7cd62f43]" name="firstTest" duration-ms="2999" started-at="2019-07-30T20:27:22Z" finished-at="2019-07-30T20:27:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="secondTest()[pri:0, instance:com.qa.tests.SampleTest@7cd62f43]" name="secondTest" duration-ms="1774" started-at="2019-07-30T20:27:25Z" finished-at="2019-07-30T20:27:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- secondTest -->
-        <test-method status="FAIL" signature="thirdTest()[pri:0, instance:com.qa.tests.SampleTest@7cd62f43]" name="thirdTest" duration-ms="46772" started-at="2019-07-30T20:27:27Z" finished-at="2019-07-30T20:28:14Z">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- launchBrowser -->
+        <test-method status="FAIL" signature="actualTestHere()[pri:0, instance:com.broken.links.VerifyBrokenLinks@6d4b1c02]" name="actualTestHere" duration-ms="164062" started-at="2019-08-05T23:46:18Z" finished-at="2019-08-05T23:49:02Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [XYZ] but found [TestNG Listeners in Selenium: ITestListener & ITestResult Example]]]>
+              <![CDATA[unknown error: failed to unzip automation extension
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KiranMac.attlocal.net', ip: '192.168.1.73', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_181'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [XYZ] but found [TestNG Listeners in Selenium: ITestListener & ITestResult Example]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.qa.tests.SampleTest.thirdTest(SampleTest.java:49)
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to unzip automation extension
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KiranMac.attlocal.net', ip: '192.168.1.73', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_181'
+Driver info: driver.version: ChromeDriver
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+at com.qa.base.BaseClass.openURLHeadLess(BaseClass.java:148)
+at com.broken.links.VerifyBrokenLinks.actualTestHere(VerifyBrokenLinks.java:100)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,15 +85,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- thirdTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.qa.tests.SampleTest@7cd62f43]" name="afterTest" is-config="true" duration-ms="296" started-at="2019-07-30T20:28:14Z" finished-at="2019-07-30T20:28:14Z">
+        </test-method> <!-- actualTestHere -->
+        <test-method status="PASS" signature="killBrowser()[pri:0, instance:com.broken.links.VerifyBrokenLinks@6d4b1c02]" name="killBrowser" is-config="true" duration-ms="5157" started-at="2019-08-05T23:49:02Z" finished-at="2019-08-05T23:49:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.qa.tests.SampleTest -->
-    </test> <!-- Free CRM App Test Cases -->
-  </suite> <!-- Selenium Utilities -->
+        </test-method> <!-- killBrowser -->
+      </class> <!-- com.broken.links.VerifyBrokenLinks -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

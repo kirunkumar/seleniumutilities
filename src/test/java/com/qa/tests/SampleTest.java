@@ -1,18 +1,22 @@
 package com.qa.tests;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.base.BaseClass;
 import com.qa.utilTests.ReadProperties;
 
 
-
+@Listeners(com.qa.listeners.ExtentReportListener.class)
 public class SampleTest extends BaseClass{
   SampleTest() {
 		super();
@@ -46,14 +50,16 @@ public class SampleTest extends BaseClass{
 	
 	
 	driver.get("https://www.guru99.com/listeners-selenium-webdriver.html");
-	Assert.assertEquals(driver.getTitle(), "XYZ");
+	AssertJUnit.assertEquals(driver.getTitle(), "XYZ");
 	
   }
 
+  @Parameters({ "browser" })
   @BeforeTest
-  public void beforeTest() {
+  public void beforeTest(String browserName) {
 	  loadProperties();
-	  initializeDriver();	  
+	  initializeDriver(browserName);	
+	  System.out.println("Browser Name passed is: " + browserName);
 	  
   }
 
@@ -63,5 +69,12 @@ public class SampleTest extends BaseClass{
 	  
 	  driver.quit();
   }
+  
+  @BeforeSuite
+  public void beforeSuiteMethod() {
+	  loadProperties();
+  }  
+	  
+  
 
 }

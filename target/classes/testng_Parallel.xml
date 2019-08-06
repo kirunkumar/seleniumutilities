@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite name="Selenium Utilities" parallel="classes" thread-count="2">
+ -->
+ 
+ <suite name="Selenium Utilities">
+ 
+	<listeners>
+		<listener class-name="com.qa.listeners.ExtentReportListener" />
+	</listeners>
+
+		
+
+
+		<test name="Selenium Utility test cases with Safari Browser">
+		
+		<parameter name="browser" value="Safari" />
+			<classes>
+				<class name="com.qa.tests.SampleTest"></class>
+				<class name="com.qa.utilTests.ReadProperties"></class>			
+				<class name="com.highlight.element.HighlightElementTest"></class>	
+	
+	
+			</classes>
+		</test>
+
+</suite>
