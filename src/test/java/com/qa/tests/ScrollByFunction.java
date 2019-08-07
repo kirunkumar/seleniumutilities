@@ -27,7 +27,7 @@ public class ScrollByFunction extends BaseClass {
 	  }*/
 	  
 	  softScrollDown();
-	  softScrollUp();
+	  //softScrollUp();
 	  
 	  //gotoLast();	  
   }
@@ -62,7 +62,7 @@ public class ScrollByFunction extends BaseClass {
   @BeforeTest
   public void launchBrowser() {
 	  
-	  initializeDriver("Safari");
+	  initializeDriver("chrome");
 	  initializeJavaScript();
 	  
   }

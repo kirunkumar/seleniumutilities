@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.broken.links.VerifyBrokenLinks">
+      <class name="com.daily.webpages.TechPages">
         <methods>
-          <include name="launchBrowser"/>
           <include name="actualTestHere"/>
           <include name="killBrowser"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- com.broken.links.VerifyBrokenLinks -->
+      </class> <!-- com.daily.webpages.TechPages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

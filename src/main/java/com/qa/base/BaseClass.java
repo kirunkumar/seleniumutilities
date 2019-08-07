@@ -17,7 +17,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BaseClass {
+import com.qa.utils.Utils;
+
+public class BaseClass extends Utils {
 	
 	public WebDriver driver;
 	public Properties prop;
@@ -48,8 +50,13 @@ public class BaseClass {
 			capabilities = DesiredCapabilities.chrome();
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
-			// /Users/kiran/Documents/Eclipse/Workspace/seleniumutilities/drivers/chromedriver
+			if(whichOS() == "mac")
+			{
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+				// /Users/kiran/Documents/Eclipse/Workspace/seleniumutilities/drivers/chromedriver
+			}
+			
+			
 			
 			driver = new ChromeDriver();
 		}
@@ -156,6 +163,7 @@ public class BaseClass {
 	        ExpectedCondition<Boolean> pageLoadCondition = new
 	                ExpectedCondition<Boolean>() {
 	                    public Boolean apply(WebDriver driver) {
+	                    	System.out.println("Document State:" + jse.executeScript("return document.readyState"));
 	                        return jse.executeScript("return document.readyState").equals("complete");
 	                    }
 	                };
@@ -172,7 +180,7 @@ public class BaseClass {
 	
 	public void softScrollDown() {
 		  
-	     for(int i=0; i<2000; i++) {
+	     for(int i=0; i<6000; i++) {
 	    	 
 	    	 jse.executeScript("window.scrollBy(0,1)", "");
 	    	 

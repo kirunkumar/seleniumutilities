@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -58,7 +59,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
           
           try {
         	  HttpURLConnection huc = (HttpURLConnection)(new URL(url).openConnection());
-              
+        	  
               huc.setRequestMethod("HEAD");
               
               huc.connect();

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +16,8 @@ public class GotoNextPageInSchoolPortal extends BaseClass {
 
 	 @Test
 	  public void actualTestHere() {
+		 
+		 WebDriverWait wait = new WebDriverWait(driver, 30);
 		  
 		  System.out.println("Hi");
 		  //driver.get("https://cfbisd.edu/eventscalendar/list/?tribe_paged=11&tribe_event_display=list");
@@ -25,7 +28,7 @@ public class GotoNextPageInSchoolPortal extends BaseClass {
 		
 		  initializeJavaScript();
 		  
-		  for(int i=1; i< 25; i++) {
+		  while(1==1) {
 			  
 			  
 			  //jse.executeScript("window.scrollTo(document.body.scrollHeight, 0)");
@@ -37,10 +40,18 @@ public class GotoNextPageInSchoolPortal extends BaseClass {
 			  
 			  //mediumWait();
 			  softScrollDown();
-			  driver.findElement(By.xpath("//*[@id=\'tribe-events-footer\']/nav/ul/li[2]/a")).click();
-			  waitForLoad(driver);
+			  try {
+				  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\'tribe-events-footer\']/nav/ul/li[2]/a")));
+				  driver.findElement(By.xpath("//*[@id=\'tribe-events-footer\']/nav/ul/li[2]/a")).click();
+				  //waitForLoad(driver);
 			  //driver.navigate().refresh();
+			  }
 			  
+			  catch(Exception e) {
+				  
+				  System.out.println("Element Not found");
+				  break;
+			  }
 			  
 		  }
 		  
