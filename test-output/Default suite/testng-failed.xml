@@ -5,7 +5,7 @@
     <classes>
       <class name="com.daily.webpages.TechPages">
         <methods>
-          <include name="actualTestHere"/>
+          <include name="secondTest"/>
           <include name="killBrowser"/>
           <include name="launchBrowser"/>
         </methods>
